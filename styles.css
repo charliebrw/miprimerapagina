@@ -86,6 +86,14 @@ ul {
     list-style: none;
 }
 
+.greeting{
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    font-weight: 700;
+    color: #5995da;
+}
+
 /*TRABAJOS*/
 
 .contenedor-trabajos {
