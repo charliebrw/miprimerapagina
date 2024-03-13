@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+    font-family: "PT Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ACERCA DE */
+
+.acerca-imagen img {
+    width: 400px;
+}
+
+.section-1 {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.acerca-de {
+    padding: 20px;
+    text-align: end;
+}
+
+.section-2 img {
+    width: 100%;
+}
+
+/* HEADER */
+
+#check {
+    display: none;
+}
+
+.logo {
+    padding: 15px;
+}
+
+.fuente-acento {
+    text-decoration: none;
+    color: aquamarine;
+    font-size: 30px;
+}
+
+.checkbtn {
+    font-size: 25px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+header a i {
+    color: aquamarine;
+    font-size: 2em;
+    padding: 15px;
+}
+
+header nav ul a {
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    display: flex;
+    background-color: blueviolet;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul {
+    display: flex;
+    color: white;
+    text-transform: uppercase;
+    gap: 1.5em;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+/*TRABAJOS*/
+
+.contenedor-trabajos {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin: 50px auto;
+}
+
+.trabajo {
+    padding: 40px;
+    border: 3px rgb(0, 183, 255) solid;
+    border-radius: 15px;
+}
+
+.trabajo img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.trabajo h2 {
+    color: blueviolet;
+    margin: 20px 0;
+}
+
+.trabajo p {
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.trabajo a {
+    padding: 10px 20px;
+    background-color: aquamarine;
+    color: blueviolet;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.trabajo a:hover {
+    background-color: blueviolet;
+    color: aquamarine;
+    transition: 0.5s;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+footer h2 {
+    color: aquamarine;
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+#footer {
+    padding: 2em;
+}
+
+#footer a i {
+    color: aquamarine;
+    font-size: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+}
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .contenedor-trabajos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+    header a i {
+        color: white;
+    }
+
+    .section-1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .section-1 h2 {
+        color: blueviolet;
+    }
+
+    .acerca-de {
+        text-align: center;
+    }
+
+    .contenedor-trabajos {
+        grid-template-columns: 1fr;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    #encabezado a {
+        display: block;
+    }
+
+    #encabezado ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        text-align: center;
+        top: 80px;
+        left: 100%;
+        transition: all 0.5s;
+    }
+
+    #check:checked~ul {
+        left: 0;
+        display: block;
+        transition: all 0.5s;
+    }
+
+    #encabezado nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    #encabezado nav ul li a {
+        font-size: 20px;
+    }
+
+    #check:checked~.checkbtn {
+        color: #2c3e50;
+    }
+}
+
+/* ------------- Encabezado Contacto ------------- */
+
+.form-header {
+    text-align: center;
+    background-color: #f6f7f8;
+    border: 1px solid #d6d9dc;
+    border-radius: 3px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 50px;
+}
+
+.form-header h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* ------------- Formulario ------------- */
+
+.formulario {
+    background-color: #f6f7f8;
+    border: 1px solid #d6d9dc;
+    border-radius: 3px;
+    width: 80%;
+    padding: 50px;
+    margin: 30px auto;
+}
+
+/* ------------- Campos del Formulario ------------- */
+
+.form-row {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"] {
+    background-color: #bdbdbd;
+    border: 0;
+    border-radius: 6px;
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+}
+
+.form-row label {
+    margin-bottom: 3px;
+    text-align: initial;
+}
+
+/* ------------- Para Pantallas de más de 700px ------------- */
+@media only screen and (min-width: 700px) {
+    .form-header {
+        padding: 50px;
+    }
+
+    .form-row {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .form-row input[type="text"],
+    .form-row input[type="email"] {
+        width: 250px;
+        height: initial;
+    }
+
+    .form-row label {
+        text-align: right;
+        width: 120px;
+        margin-top: 7px;
+        padding-right: 20px;
+    }
+}
+
+.form-row textarea {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+
+    background-color: #bdbdbd;
+    border: 0;
+    border-radius: 6px;
+
+    min-height: 200px;
+    margin-bottom: 10px;
+    padding: 7px;
+    resize: none;
+
+    width: 100%;
+}
+
+/* ------------- Para Pantallas de más de 700px ------------- */
+
+.form-row textarea {
+    width: 250px;
+}
+
+.form-row button {
+    font-size: 16px;
+    font-weight: bold;
+
+    color: #ffffff;
+    background-color: #5995da;
+
+    border: none;
+    border-radius: 3px;
+
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.form-row button:hover {
+    background-color: #76aeed;
+}
+
+.form-row button:active {
+    background-color: #407fc7;
+}
+
+/* ------------- Para Pantallas de más de 700px ------------- */
+
+.form-row button {
+    margin-left: 120px;
+}
